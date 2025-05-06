@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI TO DO LIST</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Font Awesome for microphone icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1> TO DO LIST</h1>
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="Enter task">
+      <button id="voiceInput" class="voice-btn">
+        <i class="fas fa-microphone"></i>
+      </button>
+    </div>
+    <input type="datetime-local" id="taskDate" />
+    <select id="taskPriority">
+      <option value="high">High Priority</option>
+      <option value="medium">Medium Priority</option>
+      <option value="low">Low Priority</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    <div id="taskList"></div>
+    
+    <!-- Add Audio Element -->
+    <audio id="reminderSound" preload="auto">
+      <source src="sounds/reminder.mp3" type="audio/mpeg">
+    </audio>
+    
+    
+
+  <script src="scripts.js"></script>
+</body>
+</html>
